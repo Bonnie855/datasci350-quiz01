@@ -77,5 +77,7 @@ git switch main
 git merge station-upgrade
 git log --oneline
 git add commands.txt
+git commit -m "Add command log"
+git push
 
 
