@@ -1,0 +1,40 @@
+(base) bonnietan@Mac1234 datasci350-quiz01 % git status
+On branch station-upgrade
+nothing to commit, working tree clean
+
+Because gitignore contains log?.txt, and ? Matches exactly one character and gitignore tells git to ignore that prats from the repository 
+
+(base) bonnietan@Mac1234 datasci350-quiz01 % git diff
+diff --git a/.DS_Store b/.DS_Store
+index fbaf32b..0e5d098 100644
+Binary files a/.DS_Store and b/.DS_Store differ
+diff --git a/commands.txt b/commands.txt
+index e69de29..b8ec122 100644
+--- a/commands.txt
++++ b/commands.txt
+@@ -0,0 +1,5 @@
++(base) bonnietan@Mac1234 datasci350-quiz01 % git status
++On branch station-upgrade
++nothing to commit, working tree clean
++
++Because gitignore contains log?.txt, and ? Matches exactly one character and gitignore tells git to ignore that prats from the repository 
+\ No newline at end of file
+diff --git a/results/summary.md b/results/summary.md
+index 295821a..817eec6 100644
+--- a/results/summary.md
++++ b/results/summary.md
+@@ -1 +1,2 @@
+ Analysis of the first field season.
++      41
+diff --git a/scripts/03-plot.py b/scripts/03-plot.py
+index 70ea841..c5af7da 100644
+--- a/scripts/03-plot.py
++++ b/scripts/03-plot.py
+@@ -1,3 +1,4 @@
++# Reviewed for the field season report
+ # Plot the daily temperature readings
+ # Prints a simple text chart, one bar per reading.
+ 
+(END)
+
++ means lines that were added to the new version of the file
