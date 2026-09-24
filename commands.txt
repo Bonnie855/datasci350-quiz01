@@ -1,10 +1,10 @@
-(base) bonnietan@Mac1234 datasci350-quiz01 % git status
+Task 13: git status gives: 
 On branch station-upgrade
 nothing to commit, working tree clean
 
 Because gitignore contains log?.txt, and ? Matches exactly one character and gitignore tells git to ignore that prats from the repository 
 
-(base) bonnietan@Mac1234 datasci350-quiz01 % git diff
+Task 15: git diff gives: 
 diff --git a/.DS_Store b/.DS_Store
 index fbaf32b..0e5d098 100644
 Binary files a/.DS_Store and b/.DS_Store differ
@@ -38,3 +38,44 @@ index 70ea841..c5af7da 100644
 (END)
 
 + means lines that were added to the new version of the file
+
+Task 19: git log --oneline gives: 
+a1d1263 (HEAD -> main, station-upgrade) Update analysis
+384a606 Add gitignore
+9dd013f Update station files
+df7a1e2 Add results directory
+a22b29e (origin/main, origin/HEAD) docs(readme): note committing commands.txt before task 18 and force push for bonus 2
+b645f85 feat: quiz 01 starter files
+
+
+
+Commands Ran: 
+git switch -c station-upgrade
+mkdir results
+touch results/summary.md
+echo "Analysis of the first field season." >> results/summary.md
+git add results
+git commit -m "Add results directory"
+mv data/sensor-readings.csv data/station-data.csv
+mkdir scripts/archive && cp scripts/*.py scripts/archive/
+rm docs/notes.md
+git add .
+git commit -m "Update station files"
+touch .gitignore      
+echo "temp/" >> .gitignore
+echo "log?.txt" >> .gitignore
+cat .gitignore
+git add .gitignore && git commit -m "Add gitignore"
+touch log{1..4}.txt
+git status
+cat data/station-data.csv | wc -l >> results/summary.md
+git diff
+git add .
+git commit -m "Update analyss"
+git commit --amend -m "Update analysis"
+git switch main
+git merge station-upgrade
+git log --oneline
+
+
+
