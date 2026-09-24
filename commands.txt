@@ -76,6 +76,6 @@ git commit --amend -m "Update analysis"
 git switch main
 git merge station-upgrade
 git log --oneline
-
+git add commands.txt
 
 
